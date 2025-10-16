@@ -13,6 +13,4 @@ class SuperHero {
 }
 
 // module.exports = new SuperHero("Batman"); // Only one instance is created
-// module.exports = SuperHero; // New instance is created every time
-// export default new SuperHero("Batman");
-export default SuperHero;
+module.exports = SuperHero; // New instance is created every time
