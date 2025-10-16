@@ -8,3 +8,6 @@ obj2 = {
 };
 
 console.log(obj1); 
+
+// exports and module.exports work like this
+// if we reassign the exports object, it will not affect the module.exports object

@@ -1,3 +1,4 @@
+// every file in node acts as a module
 const superHero = require("./super-hero");
 
 const batman = new superHero("Batman");
