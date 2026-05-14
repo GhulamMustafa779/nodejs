@@ -1,4 +1,5 @@
-import math from './math-ems.mjs';
+// using mjs extension to use es2015 modules
+import math from "./math-ems.mjs";
 
 console.log(math.add(1, 2));
 console.log(math.subtract(1, 2));

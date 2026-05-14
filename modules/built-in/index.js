@@ -1,32 +1,23 @@
-const path = require("node:path"); // node is optional
+const { PizzaShop, DrinkMachine } = require("./events");
 
-// __dirname gets the directory name of the current file
-// __filename gets the full path of the current file
-// console.log(__dirname);
-// console.log(__filename);
+const pizzaShop = new PizzaShop();
+const drinkMachine = new DrinkMachine();
 
-// basename gets the base name of the path
-// console.log(path.basename(__filename));
-// console.log(path.basename(__dirname));
+pizzaShop.on("order", (size, topping) => {
+  console.log(`Order received: ${size} pizza with ${topping} topping`);
+  drinkMachine.serveDrink(size);
+});
 
-// extname gets the extension of the path
-// console.log(path.extname(__filename));
-// console.log(path.extname(__dirname));
+pizzaShop.order("large", "pepperoni");
+pizzaShop.displayOrderCount();
 
-// parse parses the path into an object
-// console.log(path.parse(__filename));
-// console.log(path.format(path.parse(__filename)));
-
-// isAbsolute checks if the path is absolute
-// console.log(path.isAbsolute(__filename));
-// console.log(path.isAbsolute('./data.json'));
-
-// join joins the paths together and normalizes the path
-// console.log(path.join(__dirname, 'data.json'));
-// console.log(path.join('first', 'second', 'third', 'fourth.html'));
-// console.log(path.join('/first', '//second', 'third', '../fourth.html'));
-
-// resolve adds the absolute path to the current file
-console.log(path.resolve(__dirname, 'data.json'));
-console.log(path.resolve('first', 'second', 'third', 'fourth.html'));
-console.log(path.resolve('/first', 'second', 'third', '../fourth.html'));
+//functions are the first class objects in javascript.
+// a function can be passed as an argument to another function.
+// a function can be returned from another function.
+// a function can be assigned to a variable.
+// a function can be stored in an array.
+// a function can be stored in an object.
+// a function can be stored in a database.
+// a function can be stored in a file.
+// a function can be stored in a network.
+// a function can be stored in a cloud.
