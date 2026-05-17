@@ -30,3 +30,5 @@ if(cluster.isMaster) {
 
 // If we call both url in separate window at a time both will take as much time as they take while running isolated
 // but without cluster if a url with more load is running then page will less load will also take more time
+
+// cluster allows to run multiple node js instances to distribute the load among them
